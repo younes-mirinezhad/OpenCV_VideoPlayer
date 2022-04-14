@@ -30,11 +30,17 @@ HEADERS += \
 
 DISTFILES +=
 
-INCLUDEPATH += /usr/local/include/opencv4
-LIBS += -L/usr/local/lib \
-     -lopencv_core\
-     -lopencv_imgcodecs \
-     -lopencv_imgproc \
-     -lopencv_photo \
-     -lopencv_videoio \
-     -lopencv_video \
+# ----- opencv path
+unix: CONFIG += link_pkgconfig
+unix: PKGCONFIG += opencv4
+
+#INCLUDEPATH += /usr/local/include/opencv4
+#LIBS += -L/usr/local/lib \
+#     -lopencv_core\
+#     -lopencv_imgcodecs \
+#     -lopencv_imgproc \
+#     -lopencv_photo \
+#     -lopencv_videoio \
+#     -lopencv_video \
+
+
